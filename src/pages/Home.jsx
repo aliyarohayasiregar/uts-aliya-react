@@ -2,6 +2,8 @@ import { useState } from "react";
 import Product from "../components/Product";
 import Button from "../components/Button";
 import {AiFillDelete}from"react-icons/ai"
+import {AiOutlineMinusCircle,AiOutlinePlusCircle} from"react-icons/ai"
+import {MdClose} from"react-icons/md"
 
 export default function Home() {
   const [products, setProducts] = useState([
@@ -243,6 +245,7 @@ export default function Home() {
           Berikutnya
         </Button>
       </footer>
+      
       {editedProduct && (
         <form
           className="dialog"
@@ -302,10 +305,8 @@ export default function Home() {
           </button>
           </div>
         </form>
-
-
       )}
-      
+
       {isCartOpen && (
         <div className="card dialog">
           <button onClick={() => setIsCartOpen(false)}>
@@ -367,6 +368,8 @@ export default function Home() {
               </tbody>
           </table>
           </div>
+           )}
+
     </div>
   );
 }
